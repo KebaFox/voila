@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<link rel="stylesheet" type="text/css" href="styles2.css">
+	<!-- ici va reposer le tag appelant le bootsrap -->
+
+	<meta charset="utf-8">
+	<title>Apercu de mes recherches</title>
+</head>
+<body>
+	<h1>Pour créer mon site j'ai tout d'abord besoin de :</h1>
+	<h2>Le besoin de listes déroulantes <br></h2>
+	<p>A cet effet, Le rendu par défaut des navigateurs n'a jamais été idéal, c'est pourquoi les développeurs Web essayent constamment de repousser les limites lorsqu'il s'agit de donner des styles aux éléments HTML natifs. Récemment, nous avons vu apparaître de nombreux exemples de boutons radio ou de cases à cocher personnalisés, de barres de progression et beaucoup d'autres éléments, mais rien concernant les listes déroulantes ou les champs de type fichiers. je vous invite donc à visiter ce lien <a href="https://red-team-design.developpez.com/tutoriels/css/donner-style-listes-deroulantes/fichiers/" target="_blank">test du navigateur</a> pour voir si votre navigateur peut supporter les propriétés css adéquates <br></p>
+	<h2>Le balisage <br></h2>
+	<h3>voici un exemple avec span<br> (voir le code source pour les balises ayant servies)</h3>
+		<span class="custom-dropdown custom-dropdown--white">
+    		<select class="custom-dropdown__select custom-dropdown__select--white">
+        		<option>SuperMan</option>
+        		<option>SpiderMan</option>
+        		<option>IronMan</option>
+        		<option>BatMan</option>
+    		    <option>AquaMan</option>
+    		</select>
+		</span>
+
+	<h3>un autre avec label <br></h3>
+	<label>
+    	IMDB Top Movies:
+    	<span class="custom-dropdown custom-dropdown--white">
+        	<select class="custom-dropdown__select custom-dropdown__select--white">
+         	    <option>The Shawshank Redemption</option>
+         	    <option>The Godfather</option>
+            	<option>Pulp Fiction</option>
+            	<option>The Good, the Bad and the Ugly</option>
+            	<option>12 Angry Men</option>
+        	</select>
+    	</span>
+	</label>
+	<h3>Passons au css <br> (Biensur voir le code css) <strong>styles2.css</strong></h3>
+	<h3 class="text-yellow">Maintenant explication </h3>
+	<h4>appearance</h4>
+	<p>La déclaration <strong>appearance: none</strong> est utilisée pour réinitialiser le rendu par défaut de la liste. La propriété  appearance est très utile lorsque vous voulez donner à un élément un rendu spécifique qu'il ne possède pas par défaut ou si, comme dans notre cas, vous souhaitez supprimer complètement son apparence par défaut <br> 
+		Vous vous demandez peut-être à quoi correspond la déclaration <strong> @-moz-document url-prefix()</strong> dans le CSS. Il s'agit d'une astuce pour cibler uniquement les navigateurs Firefox. Elle permet de corriger un ancien bogue de <strong>Firefox</strong> concernant le fonctionnement de <strong>appearance: none</strong>. En résumé, même si la propriété semble fonctionner, la flèche native de la liste déroulante s'affiche quand même. <br>
+		Ainsi, une solution temporaire est de masquer la flèche en la décalant : @-moz-document url-prefix() {...}
+	</p>
+</body>
+</html>
